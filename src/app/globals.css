@@ -2,32 +2,60 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
+/* globals.css */
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+/* General reset for margin, padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
   }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
   }
-}
+  
+  /* Navbar Styles */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: rgb(25, 146, 71); /* Optional: Navbar ka background */
+    display: flex; /* Flexbox layout for proper alignment */
+    justify-content: space-between; /* Space between items */
+    align-items: center; /* Vertically center the content */
+    padding: 10px 20px; /* Add some padding for better spacing */
+  }
+  
+  nav .container {
+    max-width: 1200px;
+    margin: 0 auto; /* Center the container */
+    display: flex; /* Flexbox for links alignment */
+    gap: 20px; /* Add gap between links */
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .flex {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .space-x-6, .space-x-4 {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .bg-white {
+      width: 80%;
+    }
+  }
+  

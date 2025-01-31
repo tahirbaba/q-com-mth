@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+  }
+  
+  /* Navbar Styles */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    width: 100%; /* Ensure full width for navbar */
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+  }
+  
+  /* Ensure container doesn't distort layout */
+  nav .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    nav .container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    nav .container .flex {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    nav .space-x-6, nav .space-x-4 {
+      flex-direction: column;
+      align-items: center;
+      margin: 10px 0; /* Add spacing between items */
+    }
+  
+    nav .bg-white {
+      width: 100%; /* Use full width for mobile */
+      padding: 10px;
+    }
+  }
+  
